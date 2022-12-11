@@ -1,0 +1,989 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;1,300&family=Inconsolata:wght@300;400&display=swap');
+
+@font-face {
+    font-family: "Fog";
+    src: url(../assets/fonts/FoglihtenNo07.otf) format('opentype');
+}
+@font-face {
+    font-family: "GT_America_Bold";
+    src: url(../assets/fonts/GT_America_Bold.otf) format('opentype');
+}
+@font-face {
+    font-family: "GT_America_Regular";
+    src: url(../assets/fonts/GT_America_Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: "Helvetica_Neue_TPro_Regular";
+    src: url(../assets/fonts/HelveticaNeueLTPro-55Roman.otf) format('opentype');
+}
+@font-face {
+    font-family: "Helvetica_Neue_TPro_Bold";
+    src: url(../assets/fonts/HelveticaNeueLTPro-75Bold.otf) format('opentype');
+}
+
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    
+    /* height:100%;
+	min-height: 100%; */
+}
+body{
+    overflow-y: scroll;
+    max-width: 100vw;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+:root {
+    --clr-yellow: rgb(224, 178, 86);
+    --clr-black: rgb(0, 0, 0);
+    --clr-dark-gray: rgb(32, 32, 32);
+    --clr-light-gray: rgb(168, 168, 168);
+    --clr-twitter-blue: rgba(29, 155, 240);
+    /* --ff-serif: "Fog",serif;
+    --ff-sans: "Barlow Condensed", sans-serif; */
+
+    --ff-title-bold: "GT_America_Bold", sans-serif;
+    --ff-title-reg: "GT_America_Regular", sans-serif;
+    --ff-para-bold:   "Helvetica_Neue_TPro_Bold", sans-serif ;
+    --ff-para-reg:   "Helvetica_Neue_TPro_Regular", sans-serif ;
+    /* font-sizes */
+    --fs-700:clamp(4rem, 6vw,7rem);
+    --fs-600:clamp(3rem,20vw, 4rem);
+    --fs-500: clamp(2.5rem, 6vw, 3rem);
+    --fs-400: clamp(1.5rem, 6vw, 2rem);
+    --fs-350: 1.5rem;
+    --fs-300: clamp(1rem, 6vw, 1.25rem);
+    --fs-200: 0.85rem;
+
+    --fs-nav: 1rem;
+    --fs-1: 1rem;
+}
+
+/* .ff-serif { font-family: var(--ff-serif); } 
+.ff-sans { font-family: var(--ff-sans);}  */
+.ff-title-bold {font-family: var(--ff-title-bold)}
+.ff-title-reg {font-family: var(--ff-title-reg)}
+.ff-para-bold {
+    font-family: var(--ff-para-bold);
+font-weight:lighter !important;}
+.ff-para-reg {font-family: var(--ff-para-reg)}
+
+.text-yellow {color: var(--clr-yellow);}
+.text-light-gray {color: var(--clr-light-gray);}
+.text-twitter-blue {color: var(--clr-twitter-blue)}
+.text-white {color: white;}
+.text-black {color: black;}
+.text-blue {color: var(--clr-twitter-blue)}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+.fs-standard {font-size: var(--fs-1);}
+.fs-200 {font-size: var(--fs-200);}
+.fs-300 {font-size: var(--fs-300);}
+.fs-350 {font-size: var(--fs-350);}
+.fs-400 {font-size: var(--fs-400);
+font-weight: 100;}
+.fs-500 {font-size: var(--fs-500);}
+.fs-600 {font-size: var(--fs-600);}
+.fs-700 {font-size: var(--fs-700);}
+.fs-nav{font-size:var(--fs-nav)}
+
+main {
+    background-color: white;
+    /* min-height: 110vh; */
+    margin: 3rem 0;
+}
+.activity-wrapper>h3{
+    margin-bottom: 1rem;
+}
+
+#artist-statement{
+    position:fixed;
+    width: 100%;
+    height:100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+    text-align: left;
+    padding-inline: clamp(3rem,40vw,6rem); 
+}
+#artist-statement>*{
+    max-width: 60rem;
+}
+#artist-statement>p{
+margin-top: 1rem;
+}
+.click-instruction{
+    position: absolute;
+    bottom:2rem;
+    right:3rem;
+}
+#close-button{
+    position: fixed;
+    top: 2rem;
+    right:2rem;
+    cursor: pointer;
+}
+
+.tabs {
+    font-family: serif;
+}
+.background-img{
+    background: url(../assets/images/twitter-bg.png) center center ;
+    background-size: cover;
+}
+.welcome{
+    padding-inline: clamp(3rem,40vw,10rem); 
+    /* background-color: var(--clr-twitter-blue); */
+    background: url(../assets/images/twitter-bg.png) center center ;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.welcome>*{
+    max-width:80rem;
+}
+#end-slide{
+    background-color: black !important;
+    padding-inline: clamp(3rem,40vw,6rem);
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#end-slide-win{
+    background: url(../assets/images/twitter-bg-red.png) center center ;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#end-slide>*,
+#end-slide-win>*{
+    max-width: 80rem;
+}
+.mission-msg p,
+.welcome-msg-wrapper p{
+    margin: 1rem;
+}
+.bg-revenue{
+    background: url(../assets/images/twitter-bg.png) center center;
+}
+.rm-bar{
+    position: sticky;
+    top:0;
+    grid-area: rm;
+    align-self: start;
+}
+
+.rm-bar[data-interface='true']{
+    border-left: 1px solid rgb(233, 233, 233);
+}
+.welcome-msg-wrapper,
+.rm-bar-instruction,
+.rm-bar{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.flex-row{
+    flex-direction: row;
+}
+
+.rm-black-bar{
+position: relative;
+width: 1.5rem;
+height:80vh;
+background-color: black;
+border: 2px solid white;
+border-radius: 1rem;
+}
+
+.rm-black-bar span {
+    display:none;
+
+}
+.rm-black-bar:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+    z-index: 9999 !important;
+}
+.rm-blue-bar,
+.rm-blue-bar-game{
+    position: absolute;
+    left:-2px;
+    bottom: 0px;
+    width: 1.5rem;
+    height:0%;
+    background-color: var(--clr-twitter-blue);
+    border: 2px solid white;
+    border-radius: 1rem;
+    transition: height 1500ms;
+    }
+.rm-bar-value{
+    position: absolute;
+    left:-2px;
+    bottom: -20px;
+}
+
+.rm-blue-bar{
+    animation: 4s ease-in-out 0s infinite alternate fluctuate-rm;
+}
+
+
+    @keyframes fluctuate-rm {
+        from {
+          /* pushes the sun down past the viewport */
+          height:0vh;
+        }
+        to {
+          /* returns the sun to its default position */
+          height:80vh;
+        }
+    }
+.bg-revenue>.welcome-msg-wrapper,
+.bg-revenue>.click-instruction{
+    background-color: rgba(29, 155, 240,1);
+    padding:1rem;
+    border:2px solid white;
+}
+
+/* .revenue-spam{
+    position: absolute;
+    z-index: 100;
+} */
+
+
+.welcome-msg-wrapper>.twitter-logo-big{
+    margin: 4rem auto 0;
+}
+/*                  DAY OPENING             */
+/*                  DAY OPENING             */
+.daily-info-section{
+    /* background-color: var(--clr-twitter-blue); */
+    min-height: 100vh;
+    color: white;
+    grid-template-areas: ". day     logo . "
+                         ". revenue logo . ";
+                        
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 38rem)) minmax(1rem, 1fr);
+    gap:1rem;
+    grid-template-rows: 1fr 1fr 5rem;
+    /* justify-items: center; */
+    align-content:center;
+    padding-inline: clamp(3rem,40vw,6rem);                  
+}
+.day-info-wrapper{
+    grid-area: day;
+    align-self: end;
+}
+.revenue-info-wrapper{
+    grid-area: revenue;
+}
+.twitter-logo-big{
+    background: url('../assets/icons/logo-white.svg') center center no-repeat;
+    width:clamp(5rem,1rem + 35vw,30rem);
+    aspect-ratio: 1;
+    grid-area: logo;
+    align-self: center;
+}
+.daily-info-section>.twitter-logo-big{
+    position: relative;
+    top:clamp(2rem,35vw,5rem);
+}
+
+/*                  DAY SUGGESTION             */
+/*                  DAY SUGGESTION             */
+.daily-suggestion-section{
+    background-color: var(--clr-twitter-blue);
+    min-height: 100vh;
+    grid-template-areas: ". text text ."
+                         ". tweet1 tweet2."
+                         ". tweet1 tweet2."
+                         ". tweet1 tweet2.";
+                        
+    grid-template-columns: minmax(1rem, 1fr)  repeat(2, minmax(0, 38rem)) minmax(1rem, 1fr);
+    gap:clamp(1rem,35vw,2rem);
+    /* justify-items: center; */
+    align-content:center;
+    padding-inline: clamp(3rem,40vw,6rem);  
+    padding: clamp(2rem,30vw,4rem) 0;                
+}
+.twitter-interface-section{
+    grid-template-areas: "nav-left main rm suggestion-right";            
+    grid-template-columns: minmax(8rem, 1fr) minmax(36rem,40rem) minmax(3rem,4rem) minmax(8rem, 1fr);
+    /* justify-items: center;
+    align-content:center; */
+    /* padding: clamp(2rem,30vw,4rem) 0;                 */
+    grid-auto-rows: max-content;
+    /* background-color: rgb(230, 199, 199); */
+}
+#twitter-interface-section[data-visible='true'],
+#daily-info-section[data-visible="true"],
+#daily-suggestion-section[data-visible="true"]{
+    display: grid;
+}
+#twitter-interface-section[data-visible='false']{
+    display: none;
+}
+
+.tabs-wrapper[data-tab-active='false'] .home-icon{
+    background: url('../assets/icons/twitter-home.svg') center center no-repeat; 
+}
+.tabs-wrapper[data-tab-active='true'] .home-icon{
+    background: url('../assets/icons/twitter-home-night.svg') center center no-repeat; 
+}
+
+.tabs-wrapper[data-tab-active='false'] .profile-icon{
+    background: url('../assets/icons/twitter-profile.svg') center center no-repeat; }
+.tabs-wrapper[data-tab-active='true'] .profile-icon{
+    background: url('../assets/icons/twitter-profile-night.svg') center center no-repeat; }
+.tabs-wrapper[data-tab-active='false'] .data-icon{
+    background: url('../assets/icons/twitter-data.svg') center center no-repeat; }
+.tabs-wrapper[data-tab-active='true'] .data-icon{
+    background: url('../assets/icons/twitter-data-night.svg') center center no-repeat; }
+.tabs-wrapper[data-tab-active='false'] .activity-icon{
+    background: url('../assets/icons/twitter-notification.svg') center center no-repeat; }
+.tabs-wrapper[data-tab-active='true'] .activity-icon{
+    background: url('../assets/icons/twitter-notification-night.svg') center center no-repeat; }
+
+    
+.comment-icon{
+    background: url('../assets/icons/twitter-comment.svg') center center no-repeat; }
+.heart-icon{
+    background: url('../assets/icons/twitter-heart.svg') center center no-repeat; } 
+.retweet-icon{
+    background: url('../assets/icons/twitter-retweet.svg') center center no-repeat; }
+.bookmark-icon{
+    background: url('../assets/icons/twitter-bookmark.svg') center center no-repeat; }        
+.tweet-icons,
+.icons-nav{
+    width: 1.7rem;
+    aspect-ratio: 1;
+    background-size:1.7rem;
+    /* background-color: blue; */
+}
+.tweet-icons-wrappers{
+    gap:2rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+.tweet-icons-wrappers>*{
+    display: inline;
+    /* max-width: 3rem; */
+    gap:1rem;
+    align-items: center;
+    /* align-content: center; */
+}
+.nav{
+    position: sticky;
+    grid-area:nav-left;
+    top:0;
+    /* background-color: rgb(243, 243, 243); */
+    /* width: 30vw;
+    min-width: 16rem; */
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-right: 1px solid rgb(233, 233, 233);
+}
+
+.nav a{
+    color: black;
+    text-decoration: none;
+}
+.nav span,p{
+    display: block;
+    /* font-weight: 100; */
+    /* width: min-content; */
+}
+
+.nav-top,
+.nav-bottom{
+    width: clamp(8rem, 20vw,15rem);
+}
+.nav-top>*:not(:first-child),
+.nav-bottom>*{
+    margin-bottom: clamp(1rem,10vw,1.5rem);
+}
+.nav-top>*:first-child{
+    margin-bottom: 2rem;
+}
+.nav-top{
+    /* background-color: rgb(219, 219, 219); */
+}
+
+.nav-bottom{
+    /* background-color: rgb(155, 155, 155); */
+}
+.instruction-button{
+    /* background-color: white;
+    border-radius: 40px;
+    text-align: center;
+    padding: 1rem 0.5rem; */
+    cursor: pointer;
+}
+.tabs-wrapper{
+    cursor: pointer;
+}
+.tabs-wrapper[data-tab-active='true'] >.tabs{
+    font-family: var(--ff-para-bold);
+}
+.tabs-wrapper[data-tab-active='false']>.tabs{
+    font-family: var(--ff-para-reg);
+}
+
+#home-page[data-visible="true"],
+#profile-page[data-visible="true"],
+#data-page[data-visible="true"],
+.racist-tweets[data-visible='true'],
+.other-tweets[data-visible='true'],
+.home-racist-tweets[data-visible='true'],
+.home-other-tweets[data-visible='true'],
+.home-initial-tweets[data-visible='true'],
+.activity-racist-feedback[data-visible='true']
+.activity-other-feedback[data-visible='true']{
+    display: block;
+}
+
+#daily-suggestion-section[data-visible="false"],
+#daily-info-section[data-visible="false"],
+.welcome-slides[data-slide-active='false'],
+#home-page[data-visible="false"],
+#profile-page[data-visible="false"],
+#activity-page[data-visible="false"],
+#data-page[data-visible="false"],
+.racist-tweets[data-visible='false'],
+.other-tweets[data-visible='false'],
+.home-racist-tweets[data-visible='false'],
+.home-other-tweets[data-visible='false'],
+.home-initial-tweets[data-visible='false'],
+.activity-other-feedback[data-visible='false'],
+.activity-racist-feedback[data-visible='false'],
+.profile-racist-tweets[data-visible='false'],
+.profile-other-tweets[data-visible='false'],
+#end-slide[data-visible='false'],
+#end-slide-win[data-visible='false'],
+#artist-statement[data-visible='false']{
+    display: none;
+}
+.welcome-slides[data-slide-active='true'],
+.profile-racist-tweets[data-visible='true'],
+.profile-other-tweets[data-visible='true'],
+#end-slide[data-visible='true'],
+#end-slide-win[data-visible='true'],
+#artist-statement[data-visible='true']{
+    display:flex;
+}
+
+.main-area{
+    grid-area: main;
+    width: 100%;
+}
+
+.activity-header,
+.activity-wrapper,
+.home-header,
+.data-header{
+    padding:1rem 1rem;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.home-tweet-wrapper{
+    padding:1rem 1rem;
+    border-bottom: 1px solid rgb(233, 233, 233);
+
+}
+.home-tweet-wrapper:hover{
+    background-color: rgba(247,247,247,255);
+}
+.home-tweet{
+    width: 100%;
+    margin:0 auto;
+}
+.home-tweet>*{
+    margin: 0 auto;
+}
+.profile-intro{
+    padding: 0rem 1rem;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+.profile-bg[data-extreme='false']{
+    /* background-color: rgb(233,233,233); */
+    background: url('../assets/images/trevor/bg1.jpg') center center  no-repeat;
+    background-size:cover;
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    height:15rem;
+}
+.profile-bg[data-extreme='true']{
+    background: url('../assets/images/trevor/confederate-flag.png') center center  no-repeat;
+    background-size:cover;
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    height:15rem;
+}
+
+.profile-pic{
+    background:url('../assets/images/trevor/maga-hat.jpg') center center  no-repeat;
+    background-size: cover;
+    position: relative;
+    bottom: clamp(1rem,40vw,5rem);
+    width: clamp(2rem,40vw,10rem);
+    height:clamp(2rem,40vw,10rem);
+    border:4px solid white;
+    border-radius: 50%;
+}
+.profile-pic[data-extreme='true'],
+.profile-tweet-pfp[data-extreme=true],
+.trevor-pfp[data-extreme=true]{
+    background:url('../assets/images/trevor/murica-first.png') center center  no-repeat;
+    background-size: cover;
+}
+.profile-info-bottom{
+    position: relative;
+    bottom: 2rem;
+}
+.profile-info-wrapper{
+    gap:4rem;
+}
+.profile-day-join{
+    margin-top:1rem;
+}
+.profile-tweet{
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+.profile-tweet-pfp{
+    background:url('../assets/images/trevor/maga-hat.jpg') center center  no-repeat;
+    background-size: cover;
+    min-width: clamp(2rem,40vw,3rem);
+    height:clamp(2rem,40vw,3rem);
+    /* border:2px solid white; */
+    border-radius: 50%;
+}
+.profile-tweet-text{
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.data-area{
+    padding:1rem;
+}
+.data-user-personal{
+    margin-bottom: 1rem;
+}
+.data-user-interest{
+    flex-direction: column;
+
+}
+.data-user-interest>p{
+    /* display: block;
+    width: 100%; */
+}
+    
+.suggestion-aside,
+
+.rm-bar,
+.nav{
+    min-height: 100vh;
+    max-height: 100vh;
+    height:100vh
+}
+.suggestion-aside{
+     grid-area: suggestion-right;
+    position: sticky;
+    top:0;
+    min-width: 12rem;
+
+    /* background-color: red; */
+    padding: 1rem; 
+    border-left: 1px solid rgb(233, 233, 233);
+}
+/* .aside-wrapper{
+  
+} */
+
+.news-aside{
+   
+    min-height: 15rem;
+
+}
+.news-aside>*:not(:first-child){
+    flex-direction: column;
+    margin-top: 1rem;
+    /* background-color: red; */
+}
+
+
+.follow-aside{
+    height:20rem;
+}
+.follow-aside,
+.news-aside{
+    border-radius: 20px; 
+    padding:1rem;
+    margin-top:1rem;
+    width:clamp(12rem,30vw,18rem);
+    background-color: rgb(247,249,249);
+}
+
+.recommend-button-nav{
+    background-color: var(--clr-twitter-blue);
+    border-radius: 40px;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+}
+.recommend-button-nav:hover{
+    background-color: rgba(27,143,221,255);
+    
+}
+/* .recommend-button-nav[data-sleep="false"]{
+    content:'Radadad';
+    background-color: red;
+   
+} */
+.rm-indicator{
+    background-color: white;
+    padding:1rem;
+}
+.tabs,
+.algo-info{
+    white-space: nowrap;
+}
+.tabs-wrapper{
+    /* justify-content: center; */
+    align-items: center;
+    gap:1rem;
+}
+
+.nav-left{
+    grid-area:nav;
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+.trevor-name{
+    flex-direction: column;
+}
+
+.suggestion-instructions{
+    color: white;
+    grid-area: text;
+    text-align: center;
+}
+.interest-info>*{
+    margin-bottom: 1rem;
+}
+.trevor-info-wrapper{
+    flex-direction: column;
+    gap:1rem;
+}
+.trevor-info-top,
+.twitter-pfp-wrapper{
+    justify-content: start;
+    align-items: center;
+    margin-top: 1rem;
+    gap:0.5rem;
+}
+.trevor-pfp{
+    width:2.75rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:url('../assets/images/trevor/maga-hat.jpg') center center  no-repeat;
+    background-size: cover;
+}
+
+
+.twitter-pfp{
+    width:2.25rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.interest-info{
+    grid-area:interest;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 1rem 3rem;
+    border-radius: 20px;
+    height: min-content;
+    /* border: 1px solid black; */
+}
+.interest-info span{
+    display: block;
+}
+
+.tweets-choice-1,
+.tweets-choice-2,
+.tweets-choice-3{
+}
+.tweet-areas{
+    width: clamp(22rem,35vw,35rem);
+    /* min-width: 15rem; */
+    /* background-color: rgba(0,0,0,0.5); */
+    text-align: center;
+    /* align-content: center; */
+    padding:1rem;
+    border-radius: 20px;
+    /* height:min-content; */
+}
+.recommend-button{
+    margin: auto;
+    /* text-align: center; */
+}
+.tweets-choice-1{
+    grid-area: tweet1;
+}
+.tweets-choice-2{
+    grid-area: tweet2;
+}
+.tweets-choice-3{
+    grid-area: tweet3;
+}
+.twitter-tweet{
+    margin:0 auto;
+}
+.twitter-tweet{
+    height:min-content;
+}
+.recommend-button{
+    background-color: white;
+    border: 2px solid white;
+    width: min-content;
+    padding: 0.5rem 5rem;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+.recommend-button>span{
+    color: var(--clr-twitter-blue);
+}
+.recommend-button:hover{
+    background-color:var(--clr-twitter-blue);
+    border: 2px solid (--clr-twitter-blue);
+}
+
+.recommend-button:hover span{
+    color: white;
+}
+.ending-img-wrapper-2,
+.ending-img-wrapper{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.ending-img-wrapper>img{
+    max-width: 20rem;
+}
+.ending-img-wrapper-2>img{
+    max-width: 50%;
+}
+
+/* @supports (backdrop-filter: blur(1rem)) {
+    nav {
+        background-color: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(0.6rem);
+    }
+} */
+
+p {
+    font-weight: 50;
+}
+
+.rm-wrapper {
+    min-width: clamp(2rem, 6vw, 12rem);
+    padding: 0 0.25rem;
+    background-color: rgba(252, 252, 252, 0.3);
+    border: 1px solid white;
+}
+
+.rm-wrapper img {
+    object-fit: contain;
+}
+
+img {
+    width: 100%;
+}
+
+.content-wrapper {
+    max-width: 78rem;
+    /* background-color: red; */
+}
+
+@media (max-width:34.99em) {
+    .nav-wrapper {
+        padding: 0 0.5rem;
+    }
+
+}
+
+@media (min-width:35em) {
+
+    /* .content-wrapper,
+    .nav-wrapper {
+        max-width: 85%;
+    } */
+    .twitter-interface-section{
+        grid-template-columns: minmax(16rem, 1fr) minmax(20rem,40rem) minmax(3rem,4rem) minmax(10rem, 1fr);
+    }
+}
+
+@media (min-width:45em) {
+
+
+}
+
+@media (min-width:50em) {
+
+  
+}
+
+@media (min-width:55em) {
+
+    
+}
+
+.flex {display: flex;}
+.grid {display: grid;}
+.hidden {display:none;}
+
+.text-right {
+    text-align: right;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: smooth !important;
+    }
+}
+/* 
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 4px black;
+    background-color: var(--clr-twitter-blue);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--clr-twitter-blue);
+}
+
+
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track {
+    filter: grayscale(100%);
+} */
+.no-display{
+    display:none;
+}
+.focus-in-expand {
+	        animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.focus-in-expand-500{
+    animation: focus-in-expand 1s 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.focus-in-expand-1000{
+    animation: focus-in-expand 1s 600ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.focus-in-expand-1500{
+    animation: focus-in-expand 1s 900ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-10 2:41:52
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation focus-in-expand
+ * ----------------------------------------
+ */
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
