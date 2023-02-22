@@ -896,7 +896,7 @@ img {
 .hidden {display:none;}
 .pointer {cursor: pointer;}
 .pointer:hover{
-    background-color: rgb(235, 235, 235);
+    background-color: rgba(247,247,247,255);
 }
 .text-right {
     text-align: right;
