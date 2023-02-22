@@ -894,7 +894,10 @@ img {
 .flex {display: flex;}
 .grid {display: grid;}
 .hidden {display:none;}
-
+.pointer {cursor: pointer;}
+.pointer:hover{
+    background-color: rgb(235, 235, 235);
+}
 .text-right {
     text-align: right;
 }
